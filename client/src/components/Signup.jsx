@@ -8,6 +8,7 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  // Example usage in your code
 
   const handleSubmit = async (e) => {
     e.preventDefault();

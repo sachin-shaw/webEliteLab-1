@@ -5,6 +5,7 @@ import {
   testController,
   forgotPasswordController,
   resetPasswordController,
+  changePasswordController,
   contactUsController,
 } from "../controllers/authController.js";
 import { requireSignIn } from "../middlewares/authMiddleware.js";
@@ -23,7 +24,7 @@ router.post("/login", loginController);
 router.post("/forgot-password", forgotPasswordController);
 
 router.get("/reset-password", resetPasswordController);
-router.post("/reset-password", resetPasswordController);
+router.post("/change-password", changePasswordController);
 
 router.post("/contactus", contactUsController);
 

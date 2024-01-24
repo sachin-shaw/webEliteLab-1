@@ -11,7 +11,7 @@ const ResetPassword = () => {
   const [message, setMessage] = useState("");
 
   const userValid = async () => {
-    const res = await fetch(`/forgotpassword/${id}/${token}`, {
+    const res = await fetch(`/api/v1/auth/reset-password/${id}/${token}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -41,7 +41,7 @@ const ResetPassword = () => {
         position: "top-center",
       });
     } else {
-      const res = await fetch(`/${id}/${token}`, {
+      const res = await fetch(`/api/v1/auth/reset-password/${id}/${token}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
